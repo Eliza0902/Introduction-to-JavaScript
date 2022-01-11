@@ -85,10 +85,10 @@ Do the following:
  3. Return the newly calculated age
 */
 
-function dogYears(/*add your code here*/){
-  /*add your code here*/
+function dogYears(humAge){
+  return humAge * 7
 }
-
+console.log(dogYears(7))
 
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 3 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀*/
@@ -118,8 +118,16 @@ Puppies less than 1 year
 NOTE: If done correctly, a weight of 15 lbs and age of 1 year would return 0.44999999999999996
 */  
 
-function hungryDog(/*add your code here*/){
-  /*add your code here*/
+function hungryDog(dogAge, dogWeight){ 
+  if(dogAge >= 1 && dogWeight <= 5) {
+    return dogWeight * 0.05
+  } else if (dogAge >= 1 && dogWeight <= 10) {
+    return dogWeight * 0.04
+  } else if (dogAge >= 1 && dogWeight <= 15) {
+    return dogWeight * 0.03
+  } else if (dogAge  1 && dogWeight > 15) {
+    return dogWeight * 0.02
+  
 }
 
 
@@ -146,10 +154,29 @@ RULES OF THE GAME: Scissors beats Paper | Paper beats Rock | Rock beats Scissors
 
 HINT: Remember that the order in which we pass in our arguments matters when it comes to parameters
 */
+let comChoice = Math.floor(Math.random() * 3);
+if(comChoice === 1) {
+  comChoice = 'Scissors'
+} else if (comChoice === 2) {
+  comChoice = 'Paper'
+} else { comChoice = 'Rock'}
+
+
 
 function game(user, computer){
-  /*add your code here*/
+  if(user === computer) {
+    return 'it\'s a tie' 
+  } else if (user === 'Rock' && computer === 'Scissors') {
+    return 'you win!'
+  } else if (user === 'Paper' && computer === 'Rock' ) {
+    return 'you win!'
+  } else if (user === 'Scissors' && computer === 'Paper') {
+    return 'you win'
+  } else {
+    return 'you lose!'
+  }
 }
+
 
 
 
@@ -164,8 +191,9 @@ Using the miles function below do the following:
 3. Return the number of miles
 */
 
-function miles(/*add your code here*/){
-  /*add your code here*/
+function miles(kilometers){
+  return kilometers * 0.621371
+
 }
 
 
