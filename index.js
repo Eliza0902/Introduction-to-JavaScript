@@ -118,17 +118,17 @@ Puppies less than 1 year
 NOTE: If done correctly, a weight of 15 lbs and age of 1 year would return 0.44999999999999996
 */  
 
-function hungryDog(dogAge, dogWeight){ 
-  if(dogAge >= 1 && dogWeight <= 5) {
+function hungryDog(dogWeight, dogAge){
+  if (dogAge >= 1 && dogWeight <= 5) {
     return dogWeight * 0.05
-  } else if (dogAge >= 1 && dogWeight <= 10) {
+  } else if (dogAge >= 1 && dogWeight >= 6 && dogWeight <= 10) {
     return dogWeight * 0.04
-  } else if (dogAge >= 1 && dogWeight <= 15) {
+  } else if (dogAge >= 1 && dogWeight >= 11 && dogWeight <= 15) {
     return dogWeight * 0.03
-  } else if (dogAge  1 && dogWeight > 15) {
-    return dogWeight * 0.02
-  
-}
+  } else if (dogAge >= 1 && dogWeight > 15) {return dogWeight * 0.02} else if (dogAge <= 0.33 ){ return dogWeight * .1} 
+  else if (dogAge >= 4/12 && dogAge < 0.583) { return dogWeight * 0.05} else if (dogAge >= 0.583) { return dogWeight * 0.04}
+};
+console.log(hungryDog( 4, 0.583));
 
 
 
@@ -154,29 +154,26 @@ RULES OF THE GAME: Scissors beats Paper | Paper beats Rock | Rock beats Scissors
 
 HINT: Remember that the order in which we pass in our arguments matters when it comes to parameters
 */
-let comChoice = Math.floor(Math.random() * 3);
-if(comChoice === 1) {
-  comChoice = 'Scissors'
-} else if (comChoice === 2) {
-  comChoice = 'Paper'
-} else { comChoice = 'Rock'}
+
+
+
 
 
 
 function game(user, computer){
   if(user === computer) {
     return 'it\'s a tie' 
-  } else if (user === 'Rock' && computer === 'Scissors') {
+  } else if (user === 'rock' && computer === 'scissors') {
     return 'you win!'
-  } else if (user === 'Paper' && computer === 'Rock' ) {
+  } else if (user === 'paper' && computer === 'rock' ) {
     return 'you win!'
-  } else if (user === 'Scissors' && computer === 'Paper') {
-    return 'you win'
+  } else if (user === 'scissors' && computer === 'paper') {
+    return 'you win!'
   } else {
     return 'you lose!'
   }
-}
-
+};
+console.log(game("Paper", "Rock"))
 
 
 
@@ -206,9 +203,9 @@ Using the feet function below do the following:
 3. Return number of feet
 */
 
-function feet(/*add your code here*/){
-  /*add your code here*/
-}
+function feet(centi){
+  return cm / 30.48
+};
 
 
 
