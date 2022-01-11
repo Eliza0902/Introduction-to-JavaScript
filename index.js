@@ -204,7 +204,7 @@ Using the feet function below do the following:
 */
 
 function feet(centi){
-  return cm / 30.48
+  return centi / 30.48
 };
 
 
@@ -219,10 +219,11 @@ Using the annoyingSong function below do the following:
     "{number} bottles of soda on the wall, {number} bottles of soda, take one down pass it around {number left over} bottles of soda on the wall"
 */
 
-function annoyingSong(/*add your code here*/){
-      /*add your code here*/
-}
+function annoyingSong(num2){for(let i = 0; i < num2 ; i++)
+  {return i}
 
+}
+console.log(annoyingSong(4));
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 7 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀*/
 
@@ -239,9 +240,17 @@ Using the grade function below do the following:
  below should return 'you got an F'
 */
 
-function grade(/*Your Code here */){
-/*Your Code here */
-}
+function grade(score){
+if(score >= 90){
+  return 'you got an A'
+} else if (score <= 89 && score >= 80){ 
+  return 'you got a B'
+} else if (score <= 79 && score >= 70){
+  return 'you got a C'
+} else if (score <= 69 && score >= 60) {
+  return 'you got a D'
+} else { return 'you got an F'}
+};
 
 
 
