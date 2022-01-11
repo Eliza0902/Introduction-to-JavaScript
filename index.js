@@ -19,7 +19,10 @@ Do the following:
 
    HINT: no function required
 */
-
+let votingAge = 23
+if(votingAge >= 18){
+  console.log(true)
+} else {console.log(false)}
 
 
 /*
@@ -32,10 +35,15 @@ Do the following:
 
    HINT: no function required
 */
+let x = 3
+let y =5
 
-
-
-
+if(y > x) {
+  x = y
+} else {
+  x = 3
+}
+console.log(x)
 
 /*
 Task 1c - Convert Strings to Numbers
@@ -47,8 +55,9 @@ Do the following:
 
    HINT: look up the Number method
 */
-
-
+let num = '1999';
+Number(num);
+console.log(num);
 
 
 /*
